@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jean's Coffee Shop</title>
+<style>
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    td.left {
+        text-align: left;
+    }
+    td.right {
+        text-align: right;
+    }
+    body {
+        text-align:center; 
+        font-family:arial;
+    }
+    .red {
+        color: red
+    }
+    td.padded {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+</head>
+<body>
+<h1>Jean's Coffee Delivery</h1>
+<br>
+<h3>Online Order Form</h3>
+
+<form action="">
+    <table class="center">
+        <tr>
+            <td class="right padded">   
+                <label><span class="red">*</span>Name:</label>
+                <input type="text">
+            </td>
+            <td class="right padded">
+                <label><span class="red">*</span>Address:</label>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="right padded">
+                <label><span class="red">*</span>Tel:</label>
+                <input type="text">
+            </td>
+            <td class="right padded">
+                <label><span class="red">*</span>Town/City:</label>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="right padded">
+                <label><span class="red">*</span>Email:</label>
+                <input type="text">
+            </td>
+            <td class="oadded">
+                <label><span class="red">*</span>Postcode:</label>
+                <input type="text">
+            </td>
+        </tr> 
+    </table>
+<p class="red">(*) required fields</p>
+<br>
+<br>
+    <table class="center">
+        <tr>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Flavors</th>
+            <th>Sugar Level</th>
+            <th>Additional</th>
+        </tr>
+        <tr>
+            <td class="left padded">
+                <input type="radio" name="type" value="hot">
+                <label for="type"> Hot Coffee</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="size" value="short">
+                <label for="size"> Short (8oz.)</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="flavors" value="americano">
+                <label for="flavors"> Americano</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="25%">
+                <label for="sugarlevel"> 25%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced cheese cake">
+                <label for="additional"> Sliced Cheese Cake</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="left padded">
+                <input type="radio" name="type" value="cold">
+                <label for="type"> Ice Blended Coffee</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="size" value="tall">
+                <label for="size"> Tall (12oz.)</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="flavors" value="caramel macchiato">
+                <label for="flavors"> Caramel Macchiato</label>
+            </td>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="50%">
+                <label for="sugarlevel"> 50%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced strawberry cake">
+                <label for="additional"> Sliced Strawberry Cake</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="left padded">
+                <input type="radio" name="type" value="frappe">
+                <label for="type"> Frappe</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="size" value="grande">
+                <label for="size"> Grande (16oz.)</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="flavors" value="mocha">
+                <label for="flavors"> Mocha</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="75%">
+                <label for="sugarlevel"> 75%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced chocolate cake">
+                <label for="additional"> Sliced Chocolate Cake</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="left padded">
+                <input type="radio" name="size" value="venti">
+                <label for="size"> Venti (20oz.)</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="flavors" value="french vanilla">
+                <label for="flavor"> French Vanilla</label>
+            </td>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="100%">
+                <label for="sugarlevel"> 100%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced matcha cake">
+                <label for="additional"> Sliced Matcha Cake</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>    
+            <td class="left padded">
+                <input type="radio" name="flavors" value="caffe latte">
+                <label for="flavors"> Caffe Latte</label>
+            </td>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="center">
+        <tr>
+            <td class="left">
+                <label for="time">Preferred delivery time:</label>
+            </td>
+            <td class="left">
+                <input type="time">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="instructions">Delivery instructions:</label>
+            </td>
+            <td class="left">
+                <textarea id="instructions" name="instructions" rows="5" cols="20">
+                </textarea>
+            </td>        
+        </tr>
+    </table>
+<br>
+<br>
+    <input type="submit" value="Submit Order">
+</form>
+</body>
+</html>
