@@ -10,70 +10,85 @@
     td.left {
         text-align: left;
     }
-    td.right {
-        text-align: right;
+    td.center {
+        text-align: center;
     }
     body {
         text-align:center; 
-        font-family:arial;
+        font-family:verdana;
     }
-    .red {
-        color: red
+    .color {
+        color: rgb(65, 40, 11)
     }
     td.padded {
         padding-left: 15px;
         padding-right: 15px;
     }
+    body {
+        background-color: #EBBBB0;
+    }
+    table {
+      box-shadow: 4px 4px 2px #473e1e;
+      background-color: #EBBBB0;
+      border: 5px solid #D48C70;
+    } 
+    tr {
+        background-color: #D48C70;
+    }
+    td:hover {
+      background-color: #F4B9B8;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 6px 10px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        background-color: #EBBBB0;
+    }
 </style>
 </head>
 <body>
-<h1>Jean's Coffee Delivery</h1>
-<br>
+<h1 style="font-family:brush script mt; font-size:5vw;">Jean's Coffee Delivery</h1>
 <h3>Online Order Form</h3>
-
-<form action="">
+<form>
     <table class="center">
         <tr>
-            <td class="right padded">   
-                <label><span class="red">*</span>Name:</label>
+            <td class="center padded">   
+                <label><span class="color">*</span>Name:</label>
                 <input type="text">
             </td>
-            <td class="right padded">
-                <label><span class="red">*</span>Address:</label>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="right padded">
-                <label><span class="red">*</span>Tel:</label>
-                <input type="text">
-            </td>
-            <td class="right padded">
-                <label><span class="red">*</span>Town/City:</label>
+            <td class="center padded">
+                <label><span class="color">*</span>Address:</label>
                 <input type="text">
             </td>
         </tr>
         <tr>
-            <td class="right padded">
-                <label><span class="red">*</span>Email:</label>
+            <td class="center padded">
+                <label><span class="color">*</span>Tel:</label>
                 <input type="text">
             </td>
-            <td class="oadded">
-                <label><span class="red">*</span>Postcode:</label>
+            <td class="center padded">
+                <label><span class="color">*</span>Town/City:</label>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="center padded">
+                <label><span class="color">*</span>Email:</label>
+                <input type="text">
+            </td>
+            <td class="center padded">
+                <label><span class="color">*</span>Postcode:</label>
                 <input type="text">
             </td>
         </tr> 
     </table>
-<p class="red">(*) required fields</p>
-<br>
-<br>
+<p class="color">(*) required fields</p>
     <table class="center">
         <tr>
             <th>Type</th>
             <th>Size</th>
             <th>Flavors</th>
-            <th>Sugar Level</th>
-            <th>Additional</th>
         </tr>
         <tr>
             <td class="left padded">
@@ -87,14 +102,6 @@
             <td class="left padded">
                 <input type="radio" name="flavors" value="americano">
                 <label for="flavors"> Americano</label>
-            </td>
-            <td class="left padded">
-                <input type="radio" name="sugarlevel" value="25%">
-                <label for="sugarlevel"> 25%</label>
-            </td>
-            <td class="left padded">
-                <input type="checkbox" name="additional" value="sliced cheese cake">
-                <label for="additional"> Sliced Cheese Cake</label>
             </td>
         </tr>
         <tr>
@@ -111,14 +118,6 @@
                 <label for="flavors"> Caramel Macchiato</label>
             </td>
             </td>
-            <td class="left padded">
-                <input type="radio" name="sugarlevel" value="50%">
-                <label for="sugarlevel"> 50%</label>
-            </td>
-            <td class="left padded">
-                <input type="checkbox" name="additional" value="sliced strawberry cake">
-                <label for="additional"> Sliced Strawberry Cake</label>
-            </td>
         </tr>
         <tr>
             <td class="left padded">
@@ -133,14 +132,6 @@
                 <input type="radio" name="flavors" value="mocha">
                 <label for="flavors"> Mocha</label>
             </td>
-            <td class="left padded">
-                <input type="radio" name="sugarlevel" value="75%">
-                <label for="sugarlevel"> 75%</label>
-            </td>
-            <td class="left padded">
-                <input type="checkbox" name="additional" value="sliced chocolate cake">
-                <label for="additional"> Sliced Chocolate Cake</label>
-            </td>
         </tr>
         <tr>
             <td></td>
@@ -151,7 +142,50 @@
             <td class="left padded">
                 <input type="radio" name="flavors" value="french vanilla">
                 <label for="flavor"> French Vanilla</label>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>    
+            <td class="left padded">
+                <input type="radio" name="flavors" value="caffe latte">
+                <label for="flavors"> Caffe Latte</label>
             </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Sugar Level</th>
+            <th>Additional</th>
+        </tr>
+        <tr>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="25%">
+                <label for="sugarlevel"> 25%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced cheese cake">
+                <label for="additional"> Sliced Cheese Cake</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="50%">
+                <label for="sugarlevel"> 50%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced strawberry cake">
+                <label for="additional"> Sliced Strawberry Cake</label>
+            </td>
+        </tr>
+            <td class="left padded">
+                <input type="radio" name="sugarlevel" value="75%">
+                <label for="sugarlevel"> 75%</label>
+            </td>
+            <td class="left padded">
+                <input type="checkbox" name="additional" value="sliced chocolate cake">
+                <label for="additional"> Sliced Chocolate Cake</label>
+            </td>
+        </tr>
+        <tr>
             <td class="left padded">
                 <input type="radio" name="sugarlevel" value="100%">
                 <label for="sugarlevel"> 100%</label>
@@ -161,18 +195,9 @@
                 <label for="additional"> Sliced Matcha Cake</label>
             </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>    
-            <td class="left padded">
-                <input type="radio" name="flavors" value="caffe latte">
-                <label for="flavors"> Caffe Latte</label>
-            </td>
-            </td>
-        </tr>
     </table>
-    <br>
-    <br>
+<br>
+<br>
     <table class="center">
         <tr>
             <td class="left">
@@ -192,7 +217,6 @@
             </td>        
         </tr>
     </table>
-<br>
 <br>
     <input type="submit" value="Submit Order">
 </form>
