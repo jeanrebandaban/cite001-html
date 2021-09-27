@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Jean's Coffee Shop</title>
+    <script src="https://kit.fontawesome.com/e45cb973c7.js" crossorigin="anonymous"></script>
+<title>Create Account</title>
 <style>
 .button1 {
     background-color: #fd9678;
     color: white;
     border: none;
+    cursor: pointer
+}
+.button1:hover {
+  background-color: #2a3027;
 }
 .button2 {
     background-color: #1abc9c;
     color: white;
     border: none;
+    cursor: pointer;
+}
+.button2:hover {
+  background-color: #2a3027;
 }
 .text-field {
     border-radius: 10px;
     padding: 8px;
     width: 100%;
+    font-size: medium;
 }
 .create-btn {
     border-radius: 20px;
@@ -28,6 +38,11 @@
     border: none;
     width: 50%;
     right: 0%;
+    float: right;
+    cursor: pointer;
+}
+.create-btn:hover {
+  background-color: #2a3027;
 }
 .bottom-btn {
     border-radius: 3px;
@@ -56,7 +71,6 @@ body {
     font-family: arial;
     font-size: medium;
 }
-
 </style>
 <body>
 <form>
@@ -64,25 +78,25 @@ body {
         <tr>
             <td class="td-text-field">
                 <label for="name"></label>
-                <input type="text" placeholder="Name" name="name" class="text-field" required>
+                <input type="text" placeholder="&#xf007 Name" name="name" class="text-field fas" required>
             </td>
         </tr>
         <tr>
             <td class="td-text-field">
                 <label for="pnumber"></label>
-                <input type="text" placeholder="Phone Number" name="pnumber" class="text-field" required>
+                <input type="text" placeholder="&#xf098 Phone Number" name="pnumber" class="text-field fas" required>
             </td>
         </tr>
         <tr>
             <td class="td-text-field">
                 <label for="email"></label>
-                <input type="text" placeholder="Email" name="email" class="text-field" required>
+                <input type="text" placeholder="&#xf0e0 Email" name="email" class="text-field fas" required>
             </td>
         </tr>
         <tr>
             <td class="td-text-field">
                 <label for="password"></label>
-                <input type="text" placeholder="Password" name="password" class="text-field" required>
+                <input type="text" placeholder="&#xf023 Password" name="password" class="text-field fas" required>
             </td>
         </tr>
         <tr>
