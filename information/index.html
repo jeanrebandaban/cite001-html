@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5.2 Advanced Javascript</title>
+<script language=javascript>
+    function Information()
+    {
+        var ename = frmInfo.ename.value;
+        var address = frmInfo.address.value;
+        var cnumber = frmInfo.cnumber.value;
+        var rate = frmInfo.rate.value;
+        var hours = frmInfo.hours.value;
+
+        if (ename =="" || address == "" || cnumber =="" || rate =="" || hours =="")
+        {
+            alert("All fields are required.");
+            return;
+        }
+        else {
+            var salary = parseFloat(rate) * parseFloat(hours);
+            var tax = parseFloat(salary) * .1
+            
+            document.write("<br><font face=georgia size=5> Employee Information <br>")
+            document.write("<br><br> Employee Name: " + ename);
+            document.write("<br><br> Address: " + address)
+            document.write("<br><br> Contact Number: " + cnumber);
+            document.write("<br><br> Salary: " + salary)
+            document.write("<br><br> Tax: " + tax);
+        }
+    }
+</script>
+<style>
+    input[type=text] {
+        float: right;
+        width: 35vw;
+        height: 25px;
+        padding: auto;
+    }
+    table {
+        margin-left: auto; 
+        margin-right: auto;
+        border: 2px solid;
+        text-align: center;
+        padding: 20px;
+        width: 50vw;
+    }
+    tr {
+        padding-right: auto;
+        padding-right: auto;
+        text-align: left;
+    }
+    body {
+        font-family: georgia;
+        font-size: x-large;
+    }
+</style>
+</head>
+<body>
+<form name="frmInfo">
+    <table>
+        <br>
+            <th style="text-align: center;">Employee Information</th>
+        <br>
+        <tr>
+            <td>
+                <br>
+                <label for="ename">Employee Name:</label>
+                <input type="text" name="ename" value=""><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address">Address:</label>
+                <input type="text" name="address" value=""><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="cnumber">Contact Number:</label>
+                <input type="text" name="cnumber" value=""><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="rate">Rate Per Hour:</label>
+                <input type="text" name="rate" value=""><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="hours">Hours Worked:</label>
+                <input type="text" name="hours" value=""><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <br>
+                <input type="button" value="Click to Display" onclick="Information()">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table> 
+</form>
+</body>
+</html>
