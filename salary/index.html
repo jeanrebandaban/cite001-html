@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5.1 Introduction to Javascript</title>
+<script language=javascript>
+    function salary()
+    {
+        var ename1 = frmSalary.ename1.value;
+        var rate1 = frmSalary.rate1.value;
+        var days1 = frmSalary.days1.value;
+        
+        var ename2 = frmSalary.ename2.value;
+        var rate2 = frmSalary.rate2.value;
+        var days2 = frmSalary.days2.value;
+        
+        var ename3 = frmSalary.ename3.value;
+        var rate3 = frmSalary.rate3.value;
+        var days3 = frmSalary.days3.value;
+    
+        var salary1 = parseFloat(rate1) * parseFloat(days1);
+            salary2 = parseFloat(rate2) * parseFloat(days2);
+            salary3 = parseFloat(rate3) * parseFloat(days3);
+      
+        document.write("<br><center><font face=arial> Staff Salary <br>")
+        document.write("<br> Employee Name 1: " + ename1);
+        document.write("<br> Salary: " + salary1)
+        document.write("<br><br> Employee Name 2: " + ename2);
+        document.write("<br> Salary: " + salary2)
+        document.write("<br><br> Employee Name 3: " + ename3);
+        document.write("<br> Salary: " + salary3)
+    }
+</script>
+<style>
+    label {
+        display: inline-block;
+        padding: 3px 6px;
+        text-align: right;
+        width: 150px;
+    }
+    body {
+        text-align: center;
+        font-family: arial;
+    }
+</style>
+</head>
+<body>
+<h3>Salary Form</h3>
+<form name="frmSalary">
+    <label for="ename1">Employee Name:</label>
+    <input type="text" name="ename1" value=""><br>
+    <label for="rate1">Rate Per Day:</label>
+    <input type="text" name="rate1" value=""><br>
+    <label for="days1">Days Worked:</label>
+    <input type="text" name="days1" value="">
+<br>
+<br>
+    <label for="ename2">Employee Name:</label>
+    <input type="text" name="ename2" value=""><br>
+    <label for="rate2">Rate Per Day:</label>
+    <input type="text" name="rate2" value=""><br>
+    <label for="days2">Days Worked:</label>
+    <input type="text" name="days2" value="">
+<br>
+<br>
+    <label for="ename3">Employee Name:</label>
+    <input type="text" name="ename3" value=""><br>
+    <label for="rate3">Rate Per Day:</label>
+    <input type="text" name="rate3" value=""><br>
+    <label for="days3">Days Worked:</label>
+    <input type="text" name="days3" value="">
+<br>
+<br>
+<br>
+    <input type="button" value="Compute Total Salary" onclick="salary()">
+</form>
+</body>
+</html>
