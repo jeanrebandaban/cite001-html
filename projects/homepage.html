@@ -3,20 +3,16 @@
 
 <head>
     <title>The Caffeine Booster</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         * {
             box-sizing: border-box;
         }
 
-        /* Style the body */
         body {
             font-family: helvetica;
             margin: 0;
         }
 
-        /* Header/logo Title */
         .header {
             padding: 6vw;
             text-align: right;
@@ -36,22 +32,19 @@
             src: url(fonts/Coffeebreak.ttf);
         }
 
-        /* Style the top navigation bar */
         .navbar {
             display: flex;
             background-color: #4c4c4c;
         }
 
-        /* Style the navigation bar links */
         .navbar a {
             color: #fffefe;
-            padding: 16px 20px;
+            padding: 2vh 1vw;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
         }
 
-        /* Change color on hover */
         .navbar a:hover {
             background-color: #d1c9b8;
         }
@@ -60,33 +53,24 @@
             background-color: #ab9975;
         }
 
-        /* Column container */
         .row {
             display: flex;
             flex-wrap: wrap;
             background-image: url("images/coffee2.png");
-            /* opacity: 0.7; */
         }
 
-        /* Create two unequal columns that sits next to each other */
-        /* Sidebar/left column */
         .side {
             flex: 30%;
-            /* background-color: #d4c9b7; */
             padding: 20px;
             border-style: solid;
+            text-align: center;
 
         }
 
-        /* Main column */
         .main {
             flex: 70%;
-            /* background-color: #ddc18d; */
             padding: 20px;
-            /* background-image: url("images/coffee1.jpg");
-            opacity: 0.7; */
             border-style: solid;
-
         }
 
         .textbox {
@@ -97,7 +81,6 @@
             font-size: 35px;
         }
 
-        /* Footer */
         .footer {
             padding: 10px;
             text-align: center;
@@ -105,58 +88,80 @@
             color: rgb(161, 161, 161);
         }
 
-        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 700px) {
 
-        .row,
-        .navbar {
-            flex-direction: column;
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
         }
-        }
+
         .mySlides {
             display: none;
+            max-height: 100vh;
+            min-height: 100vh;
+            box-shadow: 10px 10px 5px rgb(83, 81, 81);
+            max-width: 100%;
+        }
+
+        .orderbutton {
+            display: inline-block;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: large;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            border: 2px solid #4c4c4c;
+            background: #4c4c4c;
+            opacity: .8;
+        }
+
+        .orderbutton:hover {
+            background-color: #000000;
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
     <div class="header">
         <h1>The Caffeine Booster</h1>
         <p>More espresso. Less depresso.</p>
     </div>
-
-    <!-- Navigation Bar -->
     <div class="navbar">
-        <a class="active" href="homepage.html">Home</a></li>
-        <a href="gallery.html">Gallery</a></li>
-        <a href="order.html">Order</a></li>
-        <a href="support.html">Support</a></li>
-        <a href="about.html">About Us</a></li>
+        <a class="active" href="homepage.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About Us</a>
     </div>
-
-    <!-- The flexible grid (content) -->
     <div class="row">
         <div class="side">
             <h2 class="textbox">CHILLY WEATHER, COFFEE TOGETHER.</h2>
-            <img src="images/quote.jpg" style="width: 100%; max-height: 450px;">
+            <img src="images/quote.jpg" style="width: 100%; max-height: 80vh;
+            box-shadow: 5px 5px 5px rgb(83, 81, 81);">
+            <br><br>
+            <a href="order.html" class="orderbutton">Order Now</a>
         </div>
         <div class="main">
-            <div style="min-height: 500px;">
-                <img class="mySlides" src="images/c2.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c1.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c3.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c4.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c5.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c6.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c7.jpg" style="width:100%; max-height: 600px;">
+            <div>
+                <img class="mySlides" src="images/c2.jpg">
+                <img class="mySlides" src="images/c1.jpg">
+                <img class="mySlides" src="images/c3.jpg">
+                <img class="mySlides" src="images/c4.jpg">
+                <img class="mySlides" src="images/c5.jpg">
+                <img class="mySlides" src="images/c6.jpg">
+                <img class="mySlides" src="images/c7.jpg">
             </div>
         </div>
     </div>
     <script>
         var myIndex = 0;
-        carousel();
-        function carousel() {
+        slideshow();
+        function slideshow() {
             var i;
             var x = document.getElementsByClassName("mySlides");
             for (i = 0; i < x.length; i++) {
@@ -165,16 +170,12 @@
             myIndex++;
             if (myIndex > x.length) { myIndex = 1 }
             x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 2000);
-
+            setTimeout(slideshow, 2000);
         }
     </script>
-
-    <!-- Footer -->
     <div class="footer">
         <p>© Copyright 2021, Christine Jean Rebandaban</p>
     </div>
-
 </body>
 
 </html>
