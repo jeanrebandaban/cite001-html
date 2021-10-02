@@ -3,55 +3,30 @@
 
 <head>
     <title>The Caffeine Booster</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         * {
             box-sizing: border-box;
         }
 
-        /* Style the body */
         body {
             font-family: helvetica;
             margin: 0;
+            background-color: #201e21;
         }
 
-        /* Header/logo Title */
-        .header {
-            padding: 6vw;
-            text-align: right;
-            color: #ddc18d;
-            background-image: url("images/coffee5.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            font-family: headerFont;
-            font-size: 2vw;
-            font-weight: bold;
-            text-shadow: 5px 2px #000000;
-        }
-
-        @font-face {
-            font-family: headerFont;
-            src: url(fonts/Coffeebreak.ttf);
-        }
-
-        /* Style the top navigation bar */
         .navbar {
             display: flex;
             background-color: #4c4c4c;
         }
 
-        /* Style the navigation bar links */
         .navbar a {
             color: #fffefe;
-            padding: 16px 20px;
+            padding: 2vh 1vw;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
         }
 
-        /* Change color on hover */
         .navbar a:hover {
             background-color: #d1c9b8;
         }
@@ -60,121 +35,187 @@
             background-color: #ab9975;
         }
 
-        /* Column container */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            background-image: url("images/coffee2.png");
-            /* opacity: 0.7; */
-        }
-
-        /* Create two unequal columns that sits next to each other */
-        /* Sidebar/left column */
-        .side {
-            flex: 30%;
-            /* background-color: #d4c9b7; */
-            padding: 20px;
-            border-style: solid;
-
-        }
-
-        /* Main column */
-        .main {
-            flex: 70%;
-            /* background-color: #ddc18d; */
-            padding: 20px;
-            /* background-image: url("images/coffee1.jpg");
-            opacity: 0.7; */
-            border-style: solid;
-
-        }
-
-        .textbox {
-            padding: 5px;
-            text-align: center;
-            background: #d1c9b8;
-            color: #4c4c4c;
-            font-size: 35px;
-        }
-
-        /* Footer */
         .footer {
-            padding: 10px;
+            padding: 3px;
             text-align: center;
             background-color: #4c4c4c;
             color: rgb(161, 161, 161);
+            margin-top: 10px;
         }
 
-        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 700px) {
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
 
-        .row,
-        .navbar {
-            flex-direction: column;
+        .column {
+            -ms-flex: 25%;
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
         }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
         }
-        .mySlides {
+
+        .column img:hover {
+            transform: scale(1.15);
+            transition: all 0.3s ease-in;
+            opacity: 1.1;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* loading */
+
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 120px;
+            height: 120px;
+            margin: -76px 0 0 -76px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        #myDiv {
             display: none;
+            text-align: center;
         }
     </style>
 </head>
-
-<body>
-    <!-- Header -->
-    <div class="header">
-        <h1>The Caffeine Booster</h1>
-        <p>More espresso. Less depresso.</p>
-    </div>
-
-    <!-- Navigation Bar -->
+<body onload="myFunction()" style="margin:0;">
     <div class="navbar">
-        <a href="homepage.html">Home</a></li>
-        <a class="active" href="gallery.html">Gallery</a></li>
-        <a href="order.html">Order</a></li>
-        <a href="support.html">Support</a></li>
-        <a href="about.html">About Us</a></li>
+        <a href="homepage.html">Home</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About Us</a>
     </div>
-
-    <!-- The flexible grid (content) -->
-    <div class="row">
-        <div class="side">
-            <h2 class="textbox">CHILLY WEATHER, COFFEE TOGETHER.</h2>
-            <img src="images/quote.jpg" style="width: 100%; max-height: 450px;">
-        </div>
-        <div class="main">
-            <div style="min-height: 500px;">
-                <img class="mySlides" src="images/c2.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c1.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c3.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c4.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c5.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c6.jpg" style="width:100%; max-height: 600px;">
-                <img class="mySlides" src="images/c7.jpg" style="width:100%; max-height: 600px;">
+    <div 
+        id="loader">
+    </div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="row">
+            <div class="column">
+                <img src="images/gallery/1.jpg" style="width:100%">
+                <img src="images/gallery/6.jpg" style="width:100%">
+                <img src="images/gallery/3.jpg" style="width:100%">
+                <img src="images/gallery/13.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="images/gallery/5.jpg" style="width:100%">
+                <img src="images/gallery/7.jpg" style="width:100%">
+                <img src="images/gallery/12.jpg" style="width:100%">
+                <img src="images/gallery/14.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="images/gallery/15.jpg" style="width:100%">
+                <img src="images/gallery/11.jpg" style="width:100%">
+                <img src="images/gallery/4.jpg" style="width:100%">
+                <img src="images/gallery/19.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="images/gallery/8.jpg" style="width:100%">
+                <img src="images/gallery/9.jpg" style="width:100%">
+                <img src="images/gallery/17.jpg" style="width:100%">
+                <img src="images/gallery/16.jpg" style="width:100%">
             </div>
         </div>
     </div>
-    <script>
-        var myIndex = 0;
-        carousel();
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 2000);
-
-        }
-    </script>
-
-    <!-- Footer -->
     <div class="footer">
         <p>© Copyright 2021, Christine Jean Rebandaban</p>
     </div>
+    <script>
+        var myVar;
 
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
 </body>
-
 </html>
