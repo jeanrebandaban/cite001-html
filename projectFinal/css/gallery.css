@@ -84,13 +84,13 @@ body {
     }
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .column {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
     }
-} */
+}
 
 /* loading */
 
@@ -109,7 +109,7 @@ body {
     animation: spin 2s linear infinite;
 }
 
-/* @-webkit-keyframes spin {
+@-webkit-keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
     }
@@ -127,7 +127,7 @@ body {
     100% {
         transform: rotate(360deg);
     }
-} */
+}
 
 /* Add animation to "page content" */
 .animate-bottom {
