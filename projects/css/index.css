@@ -60,7 +60,7 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    background-image: url("images/coffee2.png");
+    background-image: url("../images/coffee2.png");
 }
 
 .side {
