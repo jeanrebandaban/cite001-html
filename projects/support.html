@@ -21,7 +21,7 @@
     <div class="row">
         <div class="main">
             <div class="form">
-                <form>
+                <form name="customerForm">
                     <div class="concern">
                         <h1>What do you need help with?</h1>
                         <h2>Email us your concerns!</h2>
@@ -68,7 +68,7 @@
                 <a href="https://wwww.facebook.com" style="color: #308489"><img src="images/fb.png" height="26px">
                     thecaffeinebooster.support</a> <br>
                 <a href="mailto:mcjrebandaban1@tip.edu.ph" style="color: #308489"><img src="images/gmail.png"
-                        height="23px"> thecaffeinebooster.support</a>
+                    height="23px"> thecaffeinebooster.support</a>
                 <br>
             </div>
         </div>
@@ -83,7 +83,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h3>Sorry!</h3>
+                <h1 id="hello"></h1>
             </div>
             <div class="modal-body" id="modalBody">
             </div>
@@ -106,7 +106,7 @@
                 header.classList.remove("sticky");
             }
         }
-        
+
         var modal = document.getElementById("myModal");
         var btn = document.getElementById("submit")
         var span = document.getElementsByClassName("close")[0];
@@ -114,8 +114,12 @@
         btn.onclick = function () {
             modal.style.display = "block";
 
-            var modalbody = document.getElementById("modalBody")
-            modalbody.innerHTML = "It is not available at the moment. Please proceed to our Social Media Support.";
+            var modalheader = document.getElementById("hello");
+            modalheader.innerHTML = "Hello, " + document.getElementById("name").value + "!";
+
+            var modalbody = document.getElementById("modalBody");
+            modalbody.innerHTML = "Your concern is, <br><br>" + document.getElementById("subject").value + "<br><br>It will be processed immediately.";
+
         }
 
         span.onclick = function () {
