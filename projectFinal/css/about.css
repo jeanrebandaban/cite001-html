@@ -65,6 +65,7 @@ body {
 }
 
 .info {
+    flex: 100%;
     padding: 20px;
     text-align: center;
     background: #d1c9b8;
