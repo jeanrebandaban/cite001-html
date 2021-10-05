@@ -103,3 +103,12 @@ body {
 .orderbutton:hover {
     background-color: #a3a2a2;
 }
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .row,
+    .info {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

@@ -94,6 +94,7 @@ body {
     margin: auto;
     font-weight: bold;
     box-shadow: #000000 10px 10px 5px;
+    opacity: .7;
 }
 
 input[type=text],
