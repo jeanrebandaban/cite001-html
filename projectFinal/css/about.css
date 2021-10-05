@@ -29,6 +29,7 @@ body {
 .navbar {
     display: flex;
     background-color: #4c4c4c;
+    z-index: 9999;
 }
 
 .sticky {
@@ -69,11 +70,12 @@ body {
     flex: 100%;
     padding: 20px;
     text-align: center;
-    background: #474747;
-    color: #c0c0c0;
+    background: #3d3d3d;
+    color: #dddcdc;
     font-size: 30px;
     border-radius: 10px;
     font-family: georgia;
+    opacity: 0.9;
 }
 
 .footer {

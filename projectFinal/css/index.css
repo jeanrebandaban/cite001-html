@@ -29,6 +29,7 @@ body {
 .navbar {
     display: flex;
     background-color: #4c4c4c;
+    z-index: 9999;
 }
 
 .sticky {
@@ -87,7 +88,7 @@ body {
     border-radius: 4px;
     box-shadow: #000000 10px 10px 5px;
     font-family: georgia;
-    
+    opacity: 0.7;
 }
 
 .footer {
@@ -108,7 +109,7 @@ body {
 .mySlides {
     display: none;
     max-height: 100vh;
-    min-height: 100vh;
+    min-height: 50vh;
     box-shadow: 10px 10px 5px rgb(0, 0, 0);
     max-width: 100%;
 }
