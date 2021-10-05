@@ -5,7 +5,8 @@
 body {
     font-family: helvetica;
     margin: 0;
-    background-color: #201e21;
+    background-image: url("../images/1.jpg");
+    background-size: cover;
 }
 
 .navbar {

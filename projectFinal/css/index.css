@@ -60,7 +60,8 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../images/coffee2.png");
+    background-image: url("../images/coffee6.jpg");
+    background-size: cover;
 }
 
 .side {
@@ -78,17 +79,21 @@ body {
 }
 
 .textbox {
-    padding: 5px;
+    padding: 20px;
     text-align: center;
-    background: #d1c9b8;
-    color: #4c4c4c;
+    background: #474747;
+    color: #e4e4e4;
     font-size: 35px;
+    border-radius: 4px;
+    box-shadow: #000000 10px 10px 5px;
+    font-family: georgia;
+    
 }
 
 .footer {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    background-color: #4c4c4c;
+    background-color: #686868;
     color: rgb(161, 161, 161);
 }
 
@@ -104,7 +109,7 @@ body {
     display: none;
     max-height: 100vh;
     min-height: 100vh;
-    box-shadow: 10px 10px 5px rgb(83, 81, 81);
+    box-shadow: 10px 10px 5px rgb(0, 0, 0);
     max-width: 100%;
 }
 
@@ -118,12 +123,13 @@ body {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    color: rgb(255, 255, 255);
-    border: 2px solid #4c4c4c;
-    background: #4c4c4c;
+    color: rgb(0, 0, 0);
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
     opacity: .8;
+    font-weight: bold;
 }
 
 .orderbutton:hover {
-    background-color: #000000;
+    background-color: #757575;
 }

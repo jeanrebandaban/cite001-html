@@ -60,7 +60,8 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../images/coffee2.png");
+    background-image: url("../images/coffee6.jpg");
+    background-size: cover;
 }
 
 .side {
@@ -73,7 +74,23 @@ body {
 .main {
     flex: 50%;
     padding: 20px;
+}
 
+.concern {
+    padding: 5px;
+    text-align: center;
+    background: #474747;
+    color: #ebebeb;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: #000000 10px 10px 5px;
+}
+
+.inputfields {
+    padding: 20px;
+    background: #474747;
+    color: #d4d4d4;
+    border-radius: 10px;
 }
 
 input[type=text],
@@ -95,7 +112,7 @@ label {
 }
 
 button[type=button] {
-    background-color: #4c4c4c;
+    background-color: #020202;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -105,27 +122,11 @@ button[type=button] {
 }
 
 button[type=button]:hover {
-    background-color: #020202;
+    background-color: #a3a2a2;
 }
 
 .btn {
     text-align: center;
-}
-
-.concern {
-    padding: 5px;
-    text-align: center;
-    background: #d1c9b8;
-    color: #131313;
-    font-size: 20px;
-    border-radius: 10px;
-}
-
-.inputfields {
-    padding: 20px;
-    background: #d1c9b8;
-    color: #131313;
-    border-radius: 10px;
 }
 
 .footer {

@@ -17,8 +17,43 @@
         <a style="float: right;" href="#" id="myCart">Checkout</a>
     </div>
     <br>
+
     <form name="products">
         <div class="container">
+            <div class="inputfields row">
+                <div>
+                    <h3 style="text-align: center;">Customer's Information:</h3>
+                </div>
+                <div class="pad" style="float: left;">
+                    <label for="name">*Name: </label>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="pad" style="float: right;">
+                    <label for="address">*Address: </label>
+                    <input type="text" id="address" name="address" placeholder="Address">
+                </div>
+                <div class="pad" style="float: left;">
+                    <label for="cnumber">*Contact No: </label>
+                    <input type="text" id="cnumber" name="cnumber" placeholder="Contact Number">
+                </div>
+                <div class="pad" style="float: right;">
+                    <label for="email">*Email: </label>
+                    <input type="text" id="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="pad" style="float: right;">
+                    <label for="time">*Preferred delivery time:</label>
+                    <input type="time" id="time">
+                </div>
+                <div class="pad" style="float: left;">
+                    <label for="message">Delivery Instructions:</label>
+                    <textarea id="message" name="message" placeholder="Write something.."
+                        style="height:100px; font-family: helvetica;"></textarea>
+                </div>
+                <div style="float: right; font-weight: lighter;">
+                    <p>(*) required fields.</p>
+                </div>
+            </div>
+            <br>
             <div class="row">
                 <div class="column">
                     <div class="card">
@@ -43,7 +78,6 @@
                         <p><button type="button" onclick="addtocart('2')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/espresso.jpg" alt="Espresso" style="width:100%">
@@ -55,7 +89,6 @@
                         <p><button type="button" onclick="addtocart('3')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/caffelatte.jpg" alt="Hot Caffe Latte" style="width:100%">
@@ -81,11 +114,10 @@
                         <p><button type="button" onclick="addtocart('5')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/icedcappucino.jpg" alt="Iced Cappucino" style="width:100%">
-                        <h3>Iced Cappucin</h3>
+                        <h3>Iced Cappucino</h3>
                         <p class="price">₱100.00</p>
                         <input type="hidden" id="product6" value="Iced Cappucino">
                         <input type="hidden" id="price6" value="100.00">
@@ -93,7 +125,6 @@
                         <p><button type="button" onclick="addtocart('6')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/icedlatte.jpg" alt="Iced Latte" style="width:100%">
@@ -105,7 +136,6 @@
                         <p><button type="button" onclick="addtocart('7')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/icedmocha.jpg" alt="Iced Mocha" style="width:100%">
@@ -131,7 +161,6 @@
                         <p><button type="button" onclick="addtocart('9')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/macchiatofrappe.jpg" alt="Caramel Macchiato Frappe"
@@ -144,7 +173,6 @@
                         <p><button type="button" onclick="addtocart('10')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/mochafrappe.jpg" alt="Mocha Frappe" style="width:100%">
@@ -156,7 +184,6 @@
                         <p><button type="button" onclick="addtocart('11')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/javachipfrappe.jpg" alt="Java Chip Frappe" style="width:100%">
@@ -182,10 +209,10 @@
                         <p><button type="button" onclick="addtocart('13')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
-                        <img src="../images/orderlist/blueberry.jpg" alt="Sliced Blueberry Cheesecake" style="width:100%">
+                        <img src="../images/orderlist/blueberry.jpg" alt="Sliced Blueberry Cheesecake"
+                            style="width:100%">
                         <h3>Sliced Blueberry Cheesecake</h3>
                         <p class="price">₱130.00</p>
                         <input type="hidden" id="product14" value="Sliced Blueberry Cheesecake">
@@ -194,7 +221,6 @@
                         <p><button type="button" onclick="addtocart('14')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/cupcake2.jpg" alt="Cheese Cupcake" style="width:100%">
@@ -206,7 +232,6 @@
                         <p><button type="button" onclick="addtocart('15')">Add to Cart</button></p>
                     </div>
                 </div>
-
                 <div class="column">
                     <div class="card">
                         <img src="../images/orderlist/cupcake1.jpg" alt="Chocolate Cupcake" style="width:100%">
@@ -219,10 +244,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </form>
-    <br>
 
     <div class="footer">
         <p>© Copyright 2021, Christine Jean Rebandaban</p>
@@ -250,9 +273,9 @@
         function resetCart() {
             cart = [];
             var modalbody = document.getElementById("modalBody");
-            modalbody.innerHTML = "";
+            modalBody.innerHTML = "";
             var total = 0;
-            modalbody.innerHTML = modalbody.innerHTML + "Total = ₱" + total;
+            modalBody.innerHTML = modalBody.innerHTML + "Customer's Info: <br> <br>Total = ₱" + total;
         }
 
         function addtocart(productNumber) {
@@ -268,24 +291,42 @@
         }
 
         var modal = document.getElementById("myModal");
-        var btn = document.getElementById("myCart")
+        var btn = document.getElementById("myCart");
         var span = document.getElementsByClassName("close")[0];
 
         btn.onclick = function () {
             modal.style.display = "block";
 
-            var modalbody = document.getElementById("modalBody")
-            modalbody.innerHTML = "";
+            var modalBody = document.getElementById("modalBody")
+            modalBody.innerHTML = "";
+            var cName = document.getElementById("name").value;
+            var cAddress = document.getElementById("address").value;
+            var cNumber = document.getElementById("cnumber").value;
+            var cEmail = document.getElementById("email").value;
+            var cTime = document.getElementById("time").value;
+            var cMessage = document.getElementById("message").value;
+
+            if (cName == "" || cAddress == "" || cNumber == "" || cEmail =="" || cTime == "") {
+                alert("You must fill in all the required fields. (*)");
+                modal.style.display = "none";
+                return;
+            }
+            else {
+                modalBody.innerHTML = modalBody.innerHTML + "Customer's Info: <br><br>" + cName + "<br>"
+                    + cAddress + "<br>" + cNumber + "<br>" + cEmail + "<br>Preferred Delivery Time: " + cTime + "<br>"
+                    + cMessage + "<br>";
+            }
+
             var total = 0;
             for (var i = 0; i < cart.length; i++) {
                 var pname = cart[i].name
                 var pprice = cart[i].price
                 var cartitem = "<p>" + pname + " = " + pprice + "</p>"
                 total = parseFloat(total) + parseFloat(pprice);
-                modalbody.innerHTML = modalbody.innerHTML + cartitem;
+                modalBody.innerHTML = modalBody.innerHTML + cartitem;
             }
 
-            modalbody.innerHTML = modalbody.innerHTML + "Total = ₱" + total;
+            modalBody.innerHTML = modalBody.innerHTML + "<br>Total = ₱" + total;
         }
 
         span.onclick = function () {
