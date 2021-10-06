@@ -85,7 +85,7 @@ body {
     font-size: 20px;
     border-radius: 10px;
     box-shadow: #000000 10px 10px 5px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .inputfields {
@@ -93,7 +93,7 @@ body {
     background: #474747;
     color: #d4d4d4;
     border-radius: 10px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 input[type=text],
